@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mETACON:Dictionary xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mETACON="http://www.example.org/mETACON" name="PIM">
+  <element xsi:type="mETACON:Dictionary" name="Pacote">
+    <element xsi:type="mETACON:Concept" name="PrimeiraClasse">
+      <ownedProperty name="prop01"/>
+    </element>
+  </element>
+</mETACON:Dictionary>

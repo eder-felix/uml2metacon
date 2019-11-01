@@ -1,0 +1,36 @@
+modeltype UML uses uml('http://www.eclipse.org/uml2/5.0.0/UML');
+modeltype METACON uses mETACON('http://www.example.org/mETACON');
+
+transformation uml2metacon(in source:UML, out target:METACON);
+
+main() {
+	source.rootObjects()[Model] -> map Model2Dictionary();
+}
+
+-- Specifying the Model2Dictionary map
+mapping uml::Model :: Model2Dictionary(): mETACON::Dictionary{
+	name:=self.name;
+	element += self.packagedElement->select(e | e.oclIsKindOf(Package))[Package]->map Package2Dictionary();
+}
+
+-- Specifying the Package2Dictionary map
+mapping uml::Package :: Package2Dictionary(): mETACON::Dictionary{
+	-- name is mapped to name...
+	name:=self.name;
+	-- The Package element can contain other Packages or classes
+	-- so we have to consider these two possibilities...
+	element += self.packagedElement -> select(e | e.oclIsKindOf(Package))[Package] -> map Package2Dictionary();
+	element += self.packagedElement -> select(e | e.oclIsKindOf(Class))[Class] -> map Class2Concept();
+}
+
+-- Specifying the Class2Concept map
+mapping uml::Class :: Class2Concept(): mETACON::Concept{
+	-- again, name is mapped to name...
+	name:=self.name;
+	ownedProperty += self.ownedAttribute -> select(a | a.oclIsKindOf(Property))[Property] ->map Prop2Prop();
+}
+
+-- Specifying the Prop2Prop map
+mapping uml::Property :: Prop2Prop(): mETACON::Property{
+	name := self.name;
+}
