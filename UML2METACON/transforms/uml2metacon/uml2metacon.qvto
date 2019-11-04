@@ -53,4 +53,11 @@ mapping uml::Class :: Class2Concept(): mETACON::Concept{
 -- Specifying the Prop2Prop map
 mapping uml::Property :: Prop2Prop(): mETACON::Property{
 	name := self.name;
+	
+	-- Mapeando os tipos
+	if self.type.oclIsUndefined() then {
+		type := 'void';
+	}else{
+		type := self.type.name;
+	} endif
 }
