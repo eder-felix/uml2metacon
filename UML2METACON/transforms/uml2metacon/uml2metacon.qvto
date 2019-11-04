@@ -25,8 +25,28 @@ mapping uml::Package :: Package2Dictionary(): mETACON::Dictionary{
 
 -- Specifying the Class2Concept map
 mapping uml::Class :: Class2Concept(): mETACON::Concept{
+	-- LOCAL VARIABLES
+	var umlPublicVis = uml::VisibilityKind::public;
+	var umlPrivateVis = uml::VisibilityKind::private;
+	var umlProtectedVis = uml::VisibilityKind::protected;
+	var umlPackageVis = uml::VisibilityKind::package;
+	
+	var conPublicVis = mETACON::Visibility::cp_public;
+	var conPrivateVis = mETACON::Visibility::cp_private;
+	
 	-- again, name is mapped to name...
 	name:=self.name;
+	
+	-- Visibility mapping
+	if self.visibility.oclIsUndefined() then{
+		vis:= conPublicVis;
+	}else if self.visibility = umlPublicVis then{
+		vis:= conPublicVis;
+	}else {
+		vis:= conPrivateVis;
+	} 
+	endif
+	endif ;
 	ownedProperty += self.ownedAttribute -> select(a | a.oclIsKindOf(Property))[Property] ->map Prop2Prop();
 }
 
