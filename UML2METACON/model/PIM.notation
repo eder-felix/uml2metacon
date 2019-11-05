@@ -13,12 +13,20 @@
             <element xmi:type="uml:Property" href="PIM.uml#_EgqaUPysEemI4_K4sZrJxA"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_Eg5D0fysEemI4_K4sZrJxA"/>
           </children>
+          <children xmi:type="notation:Shape" xmi:id="_cudu8P_JEemPevY_Wx_nkw" type="Property_ClassAttributeLabel">
+            <element xmi:type="uml:Property" href="PIM.uml#_cpP3wP_JEemPevY_Wx_nkw"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_cudu8f_JEemPevY_Wx_nkw"/>
+          </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_B4NKUfysEemI4_K4sZrJxA"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_B4NKUvysEemI4_K4sZrJxA"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_B4NKU_ysEemI4_K4sZrJxA"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B4NKVPysEemI4_K4sZrJxA"/>
         </children>
         <children xmi:type="notation:BasicCompartment" xmi:id="_B4NKVfysEemI4_K4sZrJxA" type="Class_OperationCompartment_CN">
+          <children xmi:type="notation:Shape" xmi:id="_IxZcMP_MEemkQcoJTgjrDA" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="PIM.uml#_IsCbEP_MEemkQcoJTgjrDA"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_IxZcMf_MEemkQcoJTgjrDA"/>
+          </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_B4NKVvysEemI4_K4sZrJxA"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_B4NKV_ysEemI4_K4sZrJxA"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_B4NKWPysEemI4_K4sZrJxA"/>
@@ -42,6 +50,10 @@
           <children xmi:type="notation:Shape" xmi:id="_kUuoEP9NEemmOfKXrxaNVQ" type="Property_ClassAttributeLabel">
             <element xmi:type="uml:Property" href="PIM.uml#_kUUYYP9NEemmOfKXrxaNVQ"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_kUuoEf9NEemmOfKXrxaNVQ"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_fBp5kP_JEemPevY_Wx_nkw" type="Property_ClassAttributeLabel">
+            <element xmi:type="uml:Property" href="PIM.uml#_fBKxYP_JEemPevY_Wx_nkw"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_fBqgoP_JEemPevY_Wx_nkw"/>
           </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_hsKqYf9NEemmOfKXrxaNVQ"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_hsKqYv9NEemmOfKXrxaNVQ"/>

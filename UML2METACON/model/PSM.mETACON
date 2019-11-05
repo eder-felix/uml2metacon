@@ -2,7 +2,12 @@
 <mETACON:Dictionary xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mETACON="http://www.example.org/mETACON" name="PIM">
   <element xsi:type="mETACON:Dictionary" name="Pacote">
     <element xsi:type="mETACON:Concept" name="PrimeiraClasse">
-      <ownedProperty name="prop01"/>
+      <ownedProperty name="prop01" type="Integer"/>
+      <ownedProperty name="prop02" type="void"/>
+    </element>
+    <element xsi:type="mETACON:Concept" name="SegundaClasse">
+      <ownedProperty name="atributo" type="PrimeiraClasse"/>
+      <ownedProperty name="atributo2" type="void"/>
     </element>
   </element>
 </mETACON:Dictionary>

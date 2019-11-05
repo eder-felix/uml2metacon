@@ -48,6 +48,17 @@ mapping uml::Class :: Class2Concept(): mETACON::Concept{
 	endif
 	endif ;
 	ownedProperty += self.ownedAttribute -> select(a | a.oclIsKindOf(Property))[Property] ->map Prop2Prop();
+	ownedAction += self.ownedOperation -> select(a | a.oclIsKindOf(Operation))[Operation] ->map Operation2Action();
+	
+}
+
+-- Specifying the Operation2Action map
+mapping uml::Operation :: Operation2Action() : mETACON::Action{
+	var returnDir = uml::ParameterDirectionKind::return;
+	
+	name := self.name;
+	
+	returnType := self.ownedParameter -> select(e | not e.oclIsUndefined()) ->any(e | e.direction = returnDir);
 }
 
 -- Specifying the Prop2Prop map
