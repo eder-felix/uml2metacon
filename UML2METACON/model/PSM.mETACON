@@ -4,6 +4,13 @@
     <element xsi:type="mETACON:Concept" name="PrimeiraClasse">
       <ownedProperty name="prop01" type="Integer"/>
       <ownedProperty name="prop02" type="void"/>
+      <ownedAction name="operation01">
+        <ownedParameter name="ret" type="String" direction="c_return"/>
+      </ownedAction>
+      <ownedAction name="operation02">
+        <ownedParameter name="entrada1" type="Boolean"/>
+        <ownedParameter name="retorno" type="Real" direction="c_return"/>
+      </ownedAction>
     </element>
     <element xsi:type="mETACON:Concept" name="SegundaClasse">
       <ownedProperty name="atributo" type="PrimeiraClasse"/>

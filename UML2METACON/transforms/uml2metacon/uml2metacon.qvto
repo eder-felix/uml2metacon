@@ -54,11 +54,37 @@ mapping uml::Class :: Class2Concept(): mETACON::Concept{
 
 -- Specifying the Operation2Action map
 mapping uml::Operation :: Operation2Action() : mETACON::Action{
-	var returnDir = uml::ParameterDirectionKind::return;
+	name := self.name;
+	ownedParameter := self.ownedParameter -> select(a | a.oclIsKindOf(Parameter))[Parameter] ->map Parameter2Parameter();
+}
+
+-- Specifying the Parameter2Parameter map
+mapping uml::Parameter :: Parameter2Parameter() : mETACON::Parameter{
+	var inDir = uml::ParameterDirectionKind::_in;
+	var returnDir = uml::ParameterDirectionKind::_return;
+	var outDir = uml::ParameterDirectionKind::_out;
+	var inoutDir = uml::ParameterDirectionKind::_inout;
 	
 	name := self.name;
+	if self.type.oclIsUndefined() then {
+		type := 'void';
+	} else {
+		type := self.type.name;
+	} endif;
 	
-	returnType := self.ownedParameter -> select(e | not e.oclIsUndefined()) ->any(e | e.direction = returnDir);
+	-- Mapping Direction
+	if(self.direction.oclIsUndefined()) then{
+		direction := mETACON::Direction::c_in;
+	}else if(self.direction = inDir) then {
+		direction := mETACON::Direction::c_in;
+	}else if(self.direction = outDir)then{
+		direction := mETACON::Direction::c_out;
+	}else if(self.direction = inoutDir) then{
+		direction := mETACON::Direction::c_inout;
+	}else{
+		direction := mETACON::Direction::c_return;
+	} endif endif endif endif
+	
 }
 
 -- Specifying the Prop2Prop map

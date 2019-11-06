@@ -27,6 +27,10 @@
             <element xmi:type="uml:Operation" href="PIM.uml#_IsCbEP_MEemkQcoJTgjrDA"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_IxZcMf_MEemkQcoJTgjrDA"/>
           </children>
+          <children xmi:type="notation:Shape" xmi:id="_4MBFoACMEeqLGenZa4ORnw" type="Operation_ClassOperationLabel">
+            <element xmi:type="uml:Operation" href="PIM.uml#_4GYXsACMEeqLGenZa4ORnw"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_4MBFoQCMEeqLGenZa4ORnw"/>
+          </children>
           <styles xmi:type="notation:TitleStyle" xmi:id="_B4NKVvysEemI4_K4sZrJxA"/>
           <styles xmi:type="notation:SortingStyle" xmi:id="_B4NKV_ysEemI4_K4sZrJxA"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_B4NKWPysEemI4_K4sZrJxA"/>
@@ -79,7 +83,7 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-f-qQvyrEemI4_K4sZrJxA"/>
     </children>
     <element xmi:type="uml:Package" href="PIM.uml#_-fZbcPyrEemI4_K4sZrJxA"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-fuLkfyrEemI4_K4sZrJxA" x="320" y="80" width="521" height="301"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-fuLkfyrEemI4_K4sZrJxA" x="320" y="80" width="641" height="301"/>
   </children>
   <styles xmi:type="notation:StringValueStyle" xmi:id="_7mXY0fyrEemI4_K4sZrJxA" name="diagram_compatibility_version" stringValue="1.4.0"/>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_7mXY0vyrEemI4_K4sZrJxA"/>
